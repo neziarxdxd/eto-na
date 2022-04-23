@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.pisocharge.HomeActivity"
+        android:label="Home"
+        tools:layout="@layout/activity_home">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_TimeConfigFragment"
+            app:destination="@id/TimeConfigFragment" />
+
+        <action
+            android:id="@+id/action_FirstFragment_to_AmountTallyFragment"
+            app:destination="@id/AmountTallyFragment" />
+
+        <action
+            android:id="@+id/action_FirstFragment_to_TallyReportFragment"
+            app:destination="@id/TallyReportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/TimeConfigFragment"
+        android:name="com.example.pisocharge.TimeConfigActivity"
+        android:label="Time Configuration"
+        tools:layout="@layout/activity_timeconfig">
+    </fragment>
+    <fragment
+        android:id="@+id/TallyReportFragment"
+        android:name="com.example.pisocharge.TallyReportActivity"
+        android:label="Report of the Month"
+        tools:layout="@layout/activity_tallyreportmain">
+    </fragment>
+    <fragment
+        android:id="@+id/AmountTallyFragment"
+        android:name="com.example.pisocharge.AmountTallyActivity"
+        android:label="Amount Tally"
+        tools:layout="@layout/activity_amounttallymain">
+
+        <action
+            android:id="@+id/action_AmountTallyFragment_to_Station1Fragment"
+            app:destination="@id/Station1Fragment" />
+        <action
+            android:id="@+id/action_AmountTallyFragment_to_Station2Fragment"
+            app:destination="@id/Station2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/Station1Fragment"
+        android:name="com.example.pisocharge.Station1Activity"
+        android:label="Station 1 Activity"
+        tools:layout="@layout/activity_station1main">
+    </fragment>
+    <fragment
+        android:id="@+id/Station2Fragment"
+        android:name="com.example.pisocharge.Station2Activity"
+        android:label="Station 2 Activity"
+        tools:layout="@layout/activity_station2main">
+    </fragment>
+</navigation>

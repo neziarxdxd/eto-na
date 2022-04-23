@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/buttonTallyReport"
+            android:layout_width="match_parent"
+            android:layout_height="113dp"
+            android:text="Tally of Usage"
+            android:textSize="17dp"
+            app:chipIcon="@mipmap/ic_tallyofusage_foreground"
+            app:chipIconSize="105dp"
+            app:chipStartPadding="20dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/buttonAmount"
+            android:layout_width="match_parent"
+            android:layout_height="113dp"
+            android:text="Tally Report per Slot"
+            android:textSize="17dp"
+            app:chipIcon="@mipmap/ic_tallyrpu_foreground"
+            app:chipIconSize="105dp"
+            app:chipStartPadding="20dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/buttonSetting"
+            android:layout_width="match_parent"
+            android:layout_height="113dp"
+            android:text="Time Configuration"
+            android:textSize="17dp"
+            app:chipIcon="@mipmap/ic_tconfig_foreground"
+            app:chipIconSize="105dp"
+            app:chipStartPadding="20dp" />
+
+
+
+    </LinearLayout>
+</RelativeLayout>
