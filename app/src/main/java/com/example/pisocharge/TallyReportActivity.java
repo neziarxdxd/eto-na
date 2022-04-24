@@ -80,6 +80,13 @@ public class TallyReportActivity  extends Fragment {
 
             }
         });
+
+        binding.buttonDownload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                generatePrintDownloadPDF();
+            }
+        });
     }
 
 
@@ -159,6 +166,13 @@ public class TallyReportActivity  extends Fragment {
         //createMyPDF(view);
         textThisPRINT(arrayList);
         ul.execute();
+    }
+
+    public void generatePrintDownloadPDF(){
+        PDFMakerClass pdfMakerClass = new PDFMakerClass();
+        pdfMakerClass.generatePDFReport(editSearch);
+        Toast.makeText(getActivity().getApplicationContext(), "PDF Downloaded: Check the download folder", Toast.LENGTH_SHORT).show();
+
     }
 
     public void textThisPRINT(ArrayList<TallyReport> tallyReports){

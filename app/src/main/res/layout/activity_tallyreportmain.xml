@@ -8,7 +8,7 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="96dp"
+        android:layout_height="match_parent"
         android:paddingBottom="20dp">
 
         <TableRow
@@ -37,13 +37,18 @@
                 android:text="Search" />
 
 
+
         </TableRow>
+<TableRow>
 
-        <TableRow
-            android:layout_height="wrap_content"
+    <Button
 
-            android:textAlignment="center"/>
-
+        android:id="@+id/buttonDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Download" />
+</TableRow>
     </TableLayout>
 
     <TableLayout

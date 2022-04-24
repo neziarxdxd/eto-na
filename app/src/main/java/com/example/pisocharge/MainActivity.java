@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity{
         // PDF Maker here
         if (id == R.id.createPDF) {
             PDFMakerClass pdfMakerTestOnly = new PDFMakerClass();
-            pdfMakerTestOnly.generatePDFReport();
+            pdfMakerTestOnly.generatePDFReport("2022");
             // TODO: make this Toast message added to pdfMaker
             Toast.makeText(MainActivity.this, "PDF Downloaded", Toast.LENGTH_LONG).show();
         }

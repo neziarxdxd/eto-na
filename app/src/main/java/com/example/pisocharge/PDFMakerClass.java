@@ -28,7 +28,7 @@ import java.util.HashMap;
 public class PDFMakerClass {
     ListView listView;
     ArrayList<TallyReport> arrayList;
-    public  void generatePDFReport(){
+    public  void generatePDFReport(String dateEditText){
         class TallyReport1 extends AsyncTask<Void, Void, String> {
 
             ProgressBar progressBar;
@@ -108,7 +108,7 @@ public class PDFMakerClass {
 
                 //creating request parameters
                 HashMap<String, String> params = new HashMap<>();
-                params.put("dateToday","2022");
+                params.put("dateToday",dateEditText);
 
                 //return the response
                 return requestHandler.sendPostRequest(URLs.URL_TALLY, params);
